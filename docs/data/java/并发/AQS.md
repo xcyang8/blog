@@ -149,7 +149,6 @@ public class SemaphoreExample1 {
           test(threadnum);
           semaphore.release();// 释放一个许可
         } catch (InterruptedException e) {
-          // TODO Auto-generated catch block
           e.printStackTrace();
         }
 
@@ -237,7 +236,6 @@ public class CountDownLatchExample1 {
         try {
           test(threadnum);
         } catch (InterruptedException e) {
-          // TODO Auto-generated catch block
           e.printStackTrace();
         } finally {
           countDownLatch.countDown();// 表示一个请求已经被完成
@@ -316,10 +314,8 @@ public class CyclicBarrierExample2 {
         try {
           test(threadNum);
         } catch (InterruptedException e) {
-          // TODO Auto-generated catch block
           e.printStackTrace();
         } catch (BrokenBarrierException e) {
-          // TODO Auto-generated catch block
           e.printStackTrace();
         }
       });
@@ -396,10 +392,8 @@ public class CyclicBarrierExample3 {
         try {
           test(threadNum);
         } catch (InterruptedException e) {
-          // TODO Auto-generated catch block
           e.printStackTrace();
         } catch (BrokenBarrierException e) {
-          // TODO Auto-generated catch block
           e.printStackTrace();
         }
       });
