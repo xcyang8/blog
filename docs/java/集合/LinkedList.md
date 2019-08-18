@@ -23,7 +23,7 @@ List list=Collections.synchronizedList(new LinkedList(...));
 ```
 ## 内部结构分析
 **如下图所示：**
-![LinkedList内部结构](../../../file/img/20190818162437.png)
+![LinkedList内部结构](../../../../file/img/20190818162437.png)
 看完了图之后，我们再看LinkedList类中的一个<font color="red">**内部私有类Node**</font>就很好理解了：
 ```java
 private static class Node<E> {

@@ -1,2 +1,2 @@
-docsify serve %~dp0\docs
+docsify serve %~dp0
 pause

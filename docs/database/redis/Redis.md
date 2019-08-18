@@ -240,7 +240,7 @@ AOF重写是一个有歧义的名字，该功能是通过读取数据库中的�
 
 **更多内容可以查看我的这篇文章：**
 
-- [Redis持久化](Redis持久化.md)
+- [Redis持久化](/data/database/redis/Redis持久化.md)
 
 
 ### redis 事务
