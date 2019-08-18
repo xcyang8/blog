@@ -1,18 +1,20 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**目录**
 
-<!-- MarkdownTOC -->
+- [简介](#%E7%AE%80%E4%BB%8B)
+- [内部结构分析](#%E5%86%85%E9%83%A8%E7%BB%93%E6%9E%84%E5%88%86%E6%9E%90)
+- [LinkedList源码分析](#linkedlist%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90)
+  - [构造方法](#%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95)
+  - [add方法](#add%E6%96%B9%E6%B3%95)
+  - [根据位置取数据的方法](#%E6%A0%B9%E6%8D%AE%E4%BD%8D%E7%BD%AE%E5%8F%96%E6%95%B0%E6%8D%AE%E7%9A%84%E6%96%B9%E6%B3%95)
+  - [根据对象得到索引的方法](#%E6%A0%B9%E6%8D%AE%E5%AF%B9%E8%B1%A1%E5%BE%97%E5%88%B0%E7%B4%A2%E5%BC%95%E7%9A%84%E6%96%B9%E6%B3%95)
+  - [检查链表是否包含某对象的方法：](#%E6%A3%80%E6%9F%A5%E9%93%BE%E8%A1%A8%E6%98%AF%E5%90%A6%E5%8C%85%E5%90%AB%E6%9F%90%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%96%B9%E6%B3%95)
+  - [删除方法](#%E5%88%A0%E9%99%A4%E6%96%B9%E6%B3%95)
+- [LinkedList类常用方法测试](#linkedlist%E7%B1%BB%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E6%B5%8B%E8%AF%95)
 
-- [简介](#简介)
-- [内部结构分析](#内部结构分析)
-- [LinkedList源码分析](#linkedlist源码分析)
-    - [构造方法](#构造方法)
-    - [添加（add）方法](#add方法)
-    - [根据位置取数据的方法](#根据位置取数据的方法)
-    - [根据对象得到索引的方法](#根据对象得到索引的方法)
-    - [检查链表是否包含某对象的方法：](#检查链表是否包含某对象的方法：)
-    - [删除（remove/pop）方法](#删除方法)
-- [LinkedList类常用方法测试：](#linkedlist类常用方法测试)
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-<!-- /MarkdownTOC -->
 
 ## 简介
 <font color="red">LinkedList</font>是一个实现了<font color="red">List接口</font>和<font color="red">Deque接口</font>的<font color="red">双端链表</font>。 

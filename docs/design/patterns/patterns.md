@@ -1,3 +1,15 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**目录**
+
+- [设计模式](#%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F)
+  - [**创建型**](#%E5%88%9B%E5%BB%BA%E5%9E%8B)
+  - [**结构型**](#%E7%BB%93%E6%9E%84%E5%9E%8B)
+  - [**行为型**](#%E8%A1%8C%E4%B8%BA%E5%9E%8B)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+
 ### 设计模式
 
 #### **创建型**

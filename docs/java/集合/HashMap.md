@@ -1,17 +1,19 @@
-<!-- MarkdownTOC -->
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**目录**
 
-- [HashMap 简介](#hashmap-简介)
-- [底层数据结构分析](#底层数据结构分析)
-  - [JDK1.8之前](#jdk18之前)
-  - [JDK1.8之后](#jdk18之后)
-- [HashMap源码分析](#hashmap源码分析)
-  - [构造方法](#构造方法)
-  - [put方法](#put方法)
-  - [get方法](#get方法)
-  - [resize方法](#resize方法)
-- [HashMap常用方法测试](#hashmap常用方法测试)
+- [HashMap 简介](#hashmap-%E7%AE%80%E4%BB%8B)
+- [底层数据结构分析](#%E5%BA%95%E5%B1%82%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%88%86%E6%9E%90)
+  - [JDK1.8之前](#jdk18%E4%B9%8B%E5%89%8D)
+  - [JDK1.8之后](#jdk18%E4%B9%8B%E5%90%8E)
+- [HashMap源码分析](#hashmap%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90)
+  - [构造方法](#%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95)
+  - [put方法](#put%E6%96%B9%E6%B3%95)
+  - [get方法](#get%E6%96%B9%E6%B3%95)
+  - [resize方法](#resize%E6%96%B9%E6%B3%95)
+- [HashMap常用方法测试](#hashmap%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E6%B5%8B%E8%AF%95)
 
-<!-- /MarkdownTOC -->
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 
 ## HashMap 简介

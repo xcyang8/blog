@@ -1,42 +1,46 @@
-<!-- MarkdownTOC -->
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**目录**
 
 - [Java 8 Tutorial](#java-8-tutorial)
-    - [接口的默认方法\(Default Methods for Interfaces\)](#接口的默认方法default-methods-for-interfaces)
-    - [Lambda表达式\(Lambda expressions\)](#lambda表达式lambda-expressions)
-    - [函数式接口\(Functional Interfaces\)](#函数式接口functional-interfaces)
-    - [方法和构造函数引用\(Method and Constructor References\)](#方法和构造函数引用method-and-constructor-references)
-    - [Lamda 表达式作用域\(Lambda Scopes\)](#lamda-表达式作用域lambda-scopes)
-      - [访问局部变量](#访问局部变量)
-      - [访问字段和静态变量](#访问字段和静态变量)
-      - [访问默认接口方法](#访问默认接口方法)
-    - [内置函数式接口\(Built-in Functional Interfaces\)](#内置函数式接口built-in-functional-interfaces)
+    - [接口的默认方法(Default Methods for Interfaces)](#%E6%8E%A5%E5%8F%A3%E7%9A%84%E9%BB%98%E8%AE%A4%E6%96%B9%E6%B3%95default-methods-for-interfaces)
+    - [Lambda表达式(Lambda expressions)](#lambda%E8%A1%A8%E8%BE%BE%E5%BC%8Flambda-expressions)
+    - [函数式接口(Functional Interfaces)](#%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3functional-interfaces)
+    - [方法和构造函数引用(Method and Constructor References)](#%E6%96%B9%E6%B3%95%E5%92%8C%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%BC%95%E7%94%A8method-and-constructor-references)
+    - [Lamda 表达式作用域(Lambda Scopes)](#lamda-%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%BD%9C%E7%94%A8%E5%9F%9Flambda-scopes)
+      - [访问局部变量](#%E8%AE%BF%E9%97%AE%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F)
+      - [访问字段和静态变量](#%E8%AE%BF%E9%97%AE%E5%AD%97%E6%AE%B5%E5%92%8C%E9%9D%99%E6%80%81%E5%8F%98%E9%87%8F)
+      - [访问默认接口方法](#%E8%AE%BF%E9%97%AE%E9%BB%98%E8%AE%A4%E6%8E%A5%E5%8F%A3%E6%96%B9%E6%B3%95)
+    - [内置函数式接口(Built-in Functional Interfaces)](#%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3built-in-functional-interfaces)
       - [Predicates](#predicates)
       - [Functions](#functions)
       - [Suppliers](#suppliers)
       - [Consumers](#consumers)
       - [Comparators](#comparators)
   - [Optionals](#optionals)
-  - [Streams\(流\)](#streams流)
-    - [Filter\(过滤\)](#filter过滤)
-    - [Sorted\(排序\)](#sorted排序)
-    - [Map\(映射\)](#map映射)
-    - [Match\(匹配\)](#match匹配)
-    - [Count\(计数\)](#count计数)
-    - [Reduce\(规约\)](#reduce规约)
-  - [Parallel Streams\(并行流\)](#parallel-streams并行流)
-    - [Sequential Sort\(串行排序\)](#sequential-sort串行排序)
-    - [Parallel Sort\(并行排序\)](#parallel-sort并行排序)
+  - [Streams(流)](#streams%E6%B5%81)
+    - [Filter(过滤)](#filter%E8%BF%87%E6%BB%A4)
+    - [Sorted(排序)](#sorted%E6%8E%92%E5%BA%8F)
+    - [Map(映射)](#map%E6%98%A0%E5%B0%84)
+    - [Match(匹配)](#match%E5%8C%B9%E9%85%8D)
+    - [Count(计数)](#count%E8%AE%A1%E6%95%B0)
+    - [Reduce(规约)](#reduce%E8%A7%84%E7%BA%A6)
+  - [Parallel Streams(并行流)](#parallel-streams%E5%B9%B6%E8%A1%8C%E6%B5%81)
+    - [Sequential Sort(串行排序)](#sequential-sort%E4%B8%B2%E8%A1%8C%E6%8E%92%E5%BA%8F)
+    - [Parallel Sort(并行排序)](#parallel-sort%E5%B9%B6%E8%A1%8C%E6%8E%92%E5%BA%8F)
   - [Maps](#maps)
-  - [Date API\(日期相关API\)](#date-api日期相关api)
+  - [Date API(日期相关API)](#date-api%E6%97%A5%E6%9C%9F%E7%9B%B8%E5%85%B3api)
     - [Clock](#clock)
-    - [Timezones\(时区\)](#timezones时区)
-    - [LocalTime\(本地时间\)](#localtime本地时间)
-    - [LocalDate\(本地日期\)](#localdate本地日期)
-    - [LocalDateTime\(本地日期时间\)](#localdatetime本地日期时间)
-  - [Annotations\(注解\)](#annotations注解)
-  - [Whete to go from here?](#whete-to-go-from-here)
+    - [Timezones(时区)](#timezones%E6%97%B6%E5%8C%BA)
+    - [LocalTime(本地时间)](#localtime%E6%9C%AC%E5%9C%B0%E6%97%B6%E9%97%B4)
+    - [LocalDate(本地日期)](#localdate%E6%9C%AC%E5%9C%B0%E6%97%A5%E6%9C%9F)
+    - [LocalDateTime(本地日期时间)](#localdatetime%E6%9C%AC%E5%9C%B0%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4)
+  - [Annotations(注解)](#annotations%E6%B3%A8%E8%A7%A3)
 
-<!-- /MarkdownTOC -->
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+
+
 # Java 8 Tutorial 
 
 在简短的代码示例的基础上，将学习如何使用默认接口方法，lambda表达式，方法引用和可重复注释。

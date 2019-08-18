@@ -1,24 +1,29 @@
-<!-- TOC -->
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**目录**
 
-- [redis 简介](#redis-简介)
-- [为什么要用 redis/为什么要用缓存](#为什么要用-redis为什么要用缓存)
-- [为什么要用 redis 而不用 map/guava 做缓存?](#为什么要用-redis-而不用-mapguava-做缓存)
-- [redis 和 memcached 的区别](#redis-和-memcached-的区别)
-- [redis 常见数据结构以及使用场景分析](#redis-常见数据结构以及使用场景分析)
-    - [1.String](#1string)
-    - [2.Hash](#2hash)
-    - [3.List](#3list)
-    - [4.Set](#4set)
-    - [5.Sorted Set](#5sorted-set)
-- [redis 设置过期时间](#redis-设置过期时间)
-- [redis 内存淘汰机制(MySQL里有2000w数据，Redis中只存20w的数据，如何保证Redis中的数据都是热点数据?)](#redis-内存淘汰机制mysql里有2000w数据redis中只存20w的数据如何保证redis中的数据都是热点数据)
-- [redis 持久化机制(怎么保证 redis 挂掉之后再重启数据可以进行恢复)](#redis-持久化机制怎么保证-redis-挂掉之后再重启数据可以进行恢复)
-- [redis 事务](#redis-事务)
-- [缓存雪崩和缓存穿透问题解决方案](#缓存雪崩和缓存穿透问题解决方案)
-- [如何解决 Redis 的并发竞争 Key 问题](#如何解决-redis-的并发竞争-key-问题)
-- [如何保证缓存与数据库双写时的数据一致性?](#如何保证缓存与数据库双写时的数据一致性)
+- [redis 简介](#redis-%E7%AE%80%E4%BB%8B)
+- [为什么要用 redis/为什么要用缓存](#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E7%94%A8-redis%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E7%94%A8%E7%BC%93%E5%AD%98)
+- [为什么要用 redis 而不用 map/guava 做缓存?](#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E7%94%A8-redis-%E8%80%8C%E4%B8%8D%E7%94%A8-mapguava-%E5%81%9A%E7%BC%93%E5%AD%98)
+- [redis 的线程模型](#redis-%E7%9A%84%E7%BA%BF%E7%A8%8B%E6%A8%A1%E5%9E%8B)
+- [redis 和 memcached 的区别](#redis-%E5%92%8C-memcached-%E7%9A%84%E5%8C%BA%E5%88%AB)
+- [redis 常见数据结构以及使用场景分析](#redis-%E5%B8%B8%E8%A7%81%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%BB%A5%E5%8F%8A%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E5%88%86%E6%9E%90)
+  - [1.String](#1string)
+  - [2.Hash](#2hash)
+  - [3.List](#3list)
+  - [4.Set](#4set)
+  - [5.Sorted Set](#5sorted-set)
+- [redis 设置过期时间](#redis-%E8%AE%BE%E7%BD%AE%E8%BF%87%E6%9C%9F%E6%97%B6%E9%97%B4)
+- [redis 内存淘汰机制(MySQL里有2000w数据，Redis中只存20w的数据，如何保证Redis中的数据都是热点数据?)](#redis-%E5%86%85%E5%AD%98%E6%B7%98%E6%B1%B0%E6%9C%BA%E5%88%B6mysql%E9%87%8C%E6%9C%892000w%E6%95%B0%E6%8D%AEredis%E4%B8%AD%E5%8F%AA%E5%AD%9820w%E7%9A%84%E6%95%B0%E6%8D%AE%E5%A6%82%E4%BD%95%E4%BF%9D%E8%AF%81redis%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E9%83%BD%E6%98%AF%E7%83%AD%E7%82%B9%E6%95%B0%E6%8D%AE)
+- [redis 持久化机制(怎么保证 redis 挂掉之后再重启数据可以进行恢复)](#redis-%E6%8C%81%E4%B9%85%E5%8C%96%E6%9C%BA%E5%88%B6%E6%80%8E%E4%B9%88%E4%BF%9D%E8%AF%81-redis-%E6%8C%82%E6%8E%89%E4%B9%8B%E5%90%8E%E5%86%8D%E9%87%8D%E5%90%AF%E6%95%B0%E6%8D%AE%E5%8F%AF%E4%BB%A5%E8%BF%9B%E8%A1%8C%E6%81%A2%E5%A4%8D)
+- [redis 事务](#redis-%E4%BA%8B%E5%8A%A1)
+- [缓存雪崩和缓存穿透问题解决方案](#%E7%BC%93%E5%AD%98%E9%9B%AA%E5%B4%A9%E5%92%8C%E7%BC%93%E5%AD%98%E7%A9%BF%E9%80%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88)
+- [如何解决 Redis 的并发竞争 Key 问题](#%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3-redis-%E7%9A%84%E5%B9%B6%E5%8F%91%E7%AB%9E%E4%BA%89-key-%E9%97%AE%E9%A2%98)
+- [如何保证缓存与数据库双写时的数据一致性?](#%E5%A6%82%E4%BD%95%E4%BF%9D%E8%AF%81%E7%BC%93%E5%AD%98%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%BA%93%E5%8F%8C%E5%86%99%E6%97%B6%E7%9A%84%E6%95%B0%E6%8D%AE%E4%B8%80%E8%87%B4%E6%80%A7)
 
-<!-- /TOC -->
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+
 
 ### redis 简介
 

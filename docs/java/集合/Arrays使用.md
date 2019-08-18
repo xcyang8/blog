@@ -1,3 +1,16 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**目录**
+
+- [Arrays.asList()使用指南](#arraysaslist%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97)
+  - [简介](#%E7%AE%80%E4%BB%8B)
+  - [《阿里巴巴Java 开发手册》对其的描述](#%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4java-%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C%E5%AF%B9%E5%85%B6%E7%9A%84%E6%8F%8F%E8%BF%B0)
+  - [使用时的注意事项总结](#%E4%BD%BF%E7%94%A8%E6%97%B6%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%E6%80%BB%E7%BB%93)
+  - [如何正确的将数组转换为ArrayList?](#%E5%A6%82%E4%BD%95%E6%AD%A3%E7%A1%AE%E7%9A%84%E5%B0%86%E6%95%B0%E7%BB%84%E8%BD%AC%E6%8D%A2%E4%B8%BAarraylist)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+
 ## Arrays.asList()使用指南
 
 最近使用`Arrays.asList()`遇到了一些坑，然后在网上看到这篇文章：[Java Array to List Examples](http://javadevnotes.com/java-array-to-list-examples) 感觉挺不错的，但是还是特别全面。所以，自己对于这块小知识点进行了简单的总结。

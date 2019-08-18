@@ -1,3 +1,6 @@
+
+<!-- DOCTOC SKIP -->
+
 ### 目录生成
 
  ```Node.js
@@ -8,7 +11,15 @@ npm install -g doctoc
 doctoc xx.md
 // 指定目录
 doctoc .
+//自定义TOC标题
+doctoc --title **目录** . 或者  xx.md 后续不需要在指定标题
+//指定最大目录级别
+doctoc --maxlevel 3 . 或者 xx.md
+
+下次运行将更新之前的目录结构 不是增加
  ```
+ 
+doctoc文档：[https://github.com/thlorenz/doctoc](https://github.com/thlorenz/doctoc)
 
 ### 基础语法
  #### 标题

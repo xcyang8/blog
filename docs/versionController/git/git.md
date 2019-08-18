@@ -1,3 +1,11 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**目录**
+
+- [常用命令](#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ### 常用命令
  - 从当前分支 创建新分支
     ```

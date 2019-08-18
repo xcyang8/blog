@@ -1,3 +1,14 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**目录**
+
+- [快照（snapshotting）持久化](#%E5%BF%AB%E7%85%A7snapshotting%E6%8C%81%E4%B9%85%E5%8C%96)
+- [**AOF（append-only file）持久化**](#aofappend-only-file%E6%8C%81%E4%B9%85%E5%8C%96)
+- [重写/压缩AOF](#%E9%87%8D%E5%86%99%E5%8E%8B%E7%BC%A9aof)
+- [Redis 4.0 对于持久化机制的优化](#redis-40-%E5%AF%B9%E4%BA%8E%E6%8C%81%E4%B9%85%E5%8C%96%E6%9C%BA%E5%88%B6%E7%9A%84%E4%BC%98%E5%8C%96)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 
 
 非常感谢《redis实战》真本书，本文大多内容也参考了书中的内容。非常推荐大家看一下《redis实战》这本书，感觉书中的很多理论性东西还是很不错的。

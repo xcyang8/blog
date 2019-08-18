@@ -1,23 +1,27 @@
-<!-- MarkdownTOC -->
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**目录**
 
-- [1 AQS 简单介绍](#1-aqs-简单介绍)
-- [2 AQS 原理](#2-aqs-原理)
-  - [2.1 AQS 原理概览](#21-aqs-原理概览)
-  - [2.2 AQS 对资源的共享方式](#22-aqs-对资源的共享方式)
-  - [2.3 AQS底层使用了模板方法模式](#23-aqs底层使用了模板方法模式)
-- [3 Semaphore\(信号量\)-允许多个线程同时访问](#3-semaphore信号量-允许多个线程同时访问)
-- [4 CountDownLatch （倒计时器）](#4-countdownlatch-倒计时器)
-  - [4.1 CountDownLatch 的三种典型用法](#41-countdownlatch-的三种典型用法)
-  - [4.2 CountDownLatch 的使用示例](#42-countdownlatch-的使用示例)
-  - [4.3 CountDownLatch 的不足](#43-countdownlatch-的不足)
-  - [4.4 CountDownLatch相常见面试题：](#44-countdownlatch相常见面试题)
-- [5 CyclicBarrier\(循环栅栏\)](#5-cyclicbarrier循环栅栏)
-  - [5.1 CyclicBarrier 的应用场景](#51-cyclicbarrier-的应用场景)
-  - [5.2 CyclicBarrier 的使用示例](#52-cyclicbarrier-的使用示例)
-  - [5.3 CyclicBarrier和CountDownLatch的区别](#53-cyclicbarrier和countdownlatch的区别)
-- [6 ReentrantLock 和 ReentrantReadWriteLock](#6-reentrantlock-和-reentrantreadwritelock)
+- [1 AQS 简单介绍](#1-aqs-%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D)
+- [2 AQS 原理](#2-aqs-%E5%8E%9F%E7%90%86)
+  - [2.1 AQS 原理概览](#21-aqs-%E5%8E%9F%E7%90%86%E6%A6%82%E8%A7%88)
+  - [2.2 AQS 对资源的共享方式](#22-aqs-%E5%AF%B9%E8%B5%84%E6%BA%90%E7%9A%84%E5%85%B1%E4%BA%AB%E6%96%B9%E5%BC%8F)
+  - [2.3 AQS底层使用了模板方法模式](#23-aqs%E5%BA%95%E5%B1%82%E4%BD%BF%E7%94%A8%E4%BA%86%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F)
+- [3 Semaphore(信号量)-允许多个线程同时访问](#3-semaphore%E4%BF%A1%E5%8F%B7%E9%87%8F-%E5%85%81%E8%AE%B8%E5%A4%9A%E4%B8%AA%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%97%B6%E8%AE%BF%E9%97%AE)
+- [4 CountDownLatch （倒计时器）](#4-countdownlatch-%E5%80%92%E8%AE%A1%E6%97%B6%E5%99%A8)
+  - [4.1 CountDownLatch 的三种典型用法](#41-countdownlatch-%E7%9A%84%E4%B8%89%E7%A7%8D%E5%85%B8%E5%9E%8B%E7%94%A8%E6%B3%95)
+  - [4.2 CountDownLatch 的使用示例](#42-countdownlatch-%E7%9A%84%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B)
+  - [4.3 CountDownLatch 的不足](#43-countdownlatch-%E7%9A%84%E4%B8%8D%E8%B6%B3)
+  - [4.4 CountDownLatch相常见面试题：](#44-countdownlatch%E7%9B%B8%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98)
+- [5 CyclicBarrier(循环栅栏)](#5-cyclicbarrier%E5%BE%AA%E7%8E%AF%E6%A0%85%E6%A0%8F)
+  - [5.1 CyclicBarrier 的应用场景](#51-cyclicbarrier-%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF)
+  - [5.2 CyclicBarrier 的使用示例](#52-cyclicbarrier-%E7%9A%84%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B)
+  - [5.3 CyclicBarrier和CountDownLatch的区别](#53-cyclicbarrier%E5%92%8Ccountdownlatch%E7%9A%84%E5%8C%BA%E5%88%AB)
+- [6 ReentrantLock 和 ReentrantReadWriteLock](#6-reentrantlock-%E5%92%8C-reentrantreadwritelock)
 
-<!-- /MarkdownTOC -->
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+
 
 > 常见问题：AQS原理？;CountDownLatch和CyclicBarrier了解吗,两者的区别是什么？用过Semaphore吗？
 

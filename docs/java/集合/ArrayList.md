@@ -1,15 +1,18 @@
-<!-- MarkdownTOC -->
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**目录**
 
-- [ArrayList简介](#arraylist简介)
-- [ArrayList核心源码](#arraylist核心源码)
-- [ArrayList源码分析](#arraylist源码分析)
-    - [System.arraycopy\(\)和Arrays.copyOf\(\)方法](#systemarraycopy和arrayscopyof方法)
-        - [两者联系与区别](#两者联系与区别)
-    - [ArrayList核心扩容技术](#arraylist核心扩容技术)
-    - [内部类](#内部类)
-- [ArrayList经典Demo](#arraylist经典demo)
+- [ArrayList简介](#arraylist%E7%AE%80%E4%BB%8B)
+- [ArrayList核心源码](#arraylist%E6%A0%B8%E5%BF%83%E6%BA%90%E7%A0%81)
+- [ArrayList源码分析](#arraylist%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90)
+  - [System.arraycopy()和Arrays.copyOf()方法](#systemarraycopy%E5%92%8Carrayscopyof%E6%96%B9%E6%B3%95)
+    - [两者联系与区别](#%E4%B8%A4%E8%80%85%E8%81%94%E7%B3%BB%E4%B8%8E%E5%8C%BA%E5%88%AB)
+  - [ArrayList 核心扩容技术](#arraylist-%E6%A0%B8%E5%BF%83%E6%89%A9%E5%AE%B9%E6%8A%80%E6%9C%AF)
+  - [内部类](#%E5%86%85%E9%83%A8%E7%B1%BB)
+  - [`ensureCapacity`方法](#ensurecapacity%E6%96%B9%E6%B3%95)
+- [ArrayList经典Demo](#arraylist%E7%BB%8F%E5%85%B8demo)
 
-<!-- /MarkdownTOC -->
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 
 ### ArrayList简介
