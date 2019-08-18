@@ -24,4 +24,5 @@
   ```
    doctoc --title **目录** .
 ```
- 执行之后手动删除 markdown.md内的目录,doctoc需要依赖[ack](https://beyondgrep.com/)才能跳过单个文件
+ 执行之后手动删除 markdown.md,coverpage.md内的目录  
+ doctoc需要依赖[ack](https://beyondgrep.com/)才能跳过单个文件
