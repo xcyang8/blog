@@ -39,5 +39,15 @@
     
 ### 部署
    [githubPage](https://docsify.js.org/#/deploy)
+   
+### 插件
+   - [pdf显示支持](https://github.com/lazypanda10117/docsify-pdf-embed)
+  ```markdown
+    ​```pdf
+        path-to-the-pdf-file
+    ​`.``
+    
+    三个点前面空两格,`.`` 中间多个点做转义
+```
     
 ### [官网](https://docsify.js.org/#/quickstart)
