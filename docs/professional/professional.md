@@ -12,11 +12,11 @@
  ### JAVA开发手册
  
  ``` pdf
-    blog/file/pdf/Java开发手册.pdf
+    file/pdf/Java开发手册.pdf
  ```
 
 ### 分布式系统原理介绍
 
   ```pdf
-   blog/file/pdf/分布式系统原理介绍.pdf
+   file/pdf/分布式系统原理介绍.pdf
   ```
