@@ -3,6 +3,8 @@
 **目录**
 
 - [常用命令](#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4)
+- [高级用法](#%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95)
+  - [勾子](#%E5%8B%BE%E5%AD%90)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
