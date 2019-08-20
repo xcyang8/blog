@@ -20,9 +20,6 @@
    或者运行bat脚本
    
 ### 更新目录
- 
-  ```
-   doctoc --title **目录** .
-```
- 执行之后手动删除 markdown.md,coverpage.md内的目录  
- doctoc需要依赖[ack](https://beyondgrep.com/)才能跳过单个文件
+  将pre-commit 复制到当前项目内`.git\hooks`下  
+  代码提交时 自动更新 Home.md,README.md,docs下所有文件
+  使用的是[doctoc](https://github.com/thlorenz/doctoc)

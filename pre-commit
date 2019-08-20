@@ -1,0 +1,22 @@
+#!/bin/sh
+#
+# An example hook script to verify what is about to be committed.
+# Called by "git commit" with no arguments.  The hook should
+# exit with non-zero status after issuing an appropriate message if
+# it wants to stop the commit.
+#
+# To enable this hook, rename this file to "pre-commit".
+
+echo "执行自定义脚本..."
+basedir="$(dirname $0)/../../"
+cd $basedir
+
+if [ $? -eq 0 ]; then
+    doctoc --title **目录** docs/
+	doctoc --title **目录** README.md
+	doctoc --title **目录** Home.md
+else
+    echo "***********生成目录失败****************"
+    exit 1
+fi
+echo "***********生成目录成功****************"
