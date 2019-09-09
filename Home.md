@@ -79,7 +79,7 @@
 
  - [Git](docs/versionController/git/git.md)
 
- - [MQTT](docs/util/mqtt/MQTT.md)
+ - [MQTT](docs/util/mqtt/mqtt.md)
 
 ## [技术文档](docs/professional/professional.md)
 
