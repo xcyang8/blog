@@ -10,17 +10,25 @@
 
 ## Blog
 
+
 ### 服务启动
    
    前提安装Node.js 和 docsify
    
+   >第一次启动
    ```
-   docsify serve ./index
+   docsify init .
+   ```
+   
+   >启动服务
+   
+   ```
+   docsify serve blog
    ```
    
    或者运行bat脚本
    
-### 更新目录
+### 自动更新目录
   将pre-commit 复制到当前项目内`.git\hooks`下  
   代码提交时 自动更新 Home.md,README.md,docs下所有文件
   使用的是[doctoc](https://github.com/thlorenz/doctoc)
