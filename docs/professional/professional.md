@@ -11,12 +11,12 @@
 ## 技术文档
  ### JAVA开发手册
  
- ``` pdf
-    file/pdf/Java开发手册.pdf
- ```
+``` pdf
+file/pdf/Java开发手册.pdf
+```
 
 ### 分布式系统原理介绍
 
-  ```pdf
-   file/pdf/分布式系统原理介绍.pdf
-  ```
+```pdf
+file/pdf/分布式系统原理介绍.pdf
+```

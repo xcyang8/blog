@@ -9,40 +9,48 @@
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ### 快速开始
-  - 安装依赖 
-      ```
-      npm i docsify-cli -g
-      ```
-  - 初始化
-    ``` 
-    docsify init ./docs
-    ```
-  - 启动
-    - 本地直接
-    ```
-    docsify serve D:\develop\workSpace\Yangcx5.github.io
-    ```
-    - 通过bat
+- 安装依赖
+
+```
+npm i docsify-cli -g
+```
+
+- 初始化
+
+``` 
+docsify init ./docs
+```
+
+- 启动
+ - 本地直接
     
-    bat内容：
-    ```
-    docsify serve %~dp0\docs
-    pause
-    ```
-    `%~dp0 `当前脚本存放目录  
-    在别的路径执行bat
-    ![](../../../file/img/20190818123120.png)  
+```
+docsify serve D:\develop\workSpace\Yangcx5.github.io
+```
     
-    `%cd%` cmd中当前路径  
-    在别的路径执行bat  
-    ![](../../../file/img/20190818123105.png)
+- 通过bat   
+bat内容：
+    
+```
+docsify serve %~dp0\docs
+pause
+```
+
+`%~dp0 `当前脚本存放目录  
+在别的路径执行bat
+![](../../../file/img/20190818123120.png)  
+    
+`%cd%` cmd中当前路径  
+在别的路径执行bat  
+![](../../../file/img/20190818123105.png)
     
 ### 部署
    [githubPage](https://docsify.js.org/#/deploy)
    
 ### 插件
-   - [pdf显示支持](https://github.com/lazypanda10117/docsify-pdf-embed)
-  ```markdown
+  - [pdf显示支持](https://github.com/lazypanda10117/docsify-pdf-embed)
+  
+```markdown
     ​```pdf
         path-to-the-pdf-file
     ​`.``

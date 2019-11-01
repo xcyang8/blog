@@ -11,50 +11,65 @@
 
 ### 常用命令
  - 从当前分支 创建新分支
-    ```
-    git checkout name
-    ```
+ 
+```
+git checkout name
+```
+
  - 从当前分支 创建新远程分支
-    ```
-    git chekcout -b name
-    ```
+ 
+```
+git chekcout -b name
+```
+
  - 修改远程仓库地址  
     一天把github的项目 迁到gitee的私人库
     
-    ```
-    git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
-    ```
+```
+git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
+```
     
  - 查看当前分支的远程分支地址
-    ```
-    git remote -v
-    ```
+ 
+```
+git remote -v
+```
  
  - 把本地库添加到远程库
-    ```
-    git remote add origin https://github.com/USERNAME/REPOSITORY.git
-    ```
+ 
+```
+git remote add origin https://github.com/USERNAME/REPOSITORY.git
+```
+    
 ### 高级用法
 
 #### 勾子
     //Todo待整理
     
 #### 多次commit合并
+
+>IDEA操作 [链接](https://www.cnblogs.com/itplay/p/11732353.html)
+
 ```
 git rebase -i HEAD~[number_of_commits]
 ```
 
-我们先在git上提交两个修改。git log如下：  
+我们先在git上提交两个修改。git log如下： 
+ 
 ```
 commit 7b16b280f22fe4ff57c1879867a624f6f0f14398Author: pan Date:   Sun Apr 22 08:55:32 2018 +0800    update3
 commit a7186d862b95efc5cc1d7c98277af4c72bac335dAuthor: pan Date:   Sun Apr 22 08:55:16 2018 +0800    update2
 commit 16a9a4749f8ee25ab617c46925f57c2fa8a4937eAuthor: pan Date:   Sun Apr 22 08:54:55 2018 +0800    update1
 ```
+
 合并3个成一个
+
 ```
 git rebase -i HEAD~3
 ```
-执行命令会提示：  
+
+执行命令会提示： 
+ 
 ```
 pick 16a9a47 update3 
 pick a7186d8 update2
@@ -77,10 +92,14 @@ pick 7b16b28 update1 
 选择fixup操作，git会应用这个补丁，但会丢掉提交日志
 选择exec操作，git会在shell中运行这个命令
 ```
+
 保留最新一次，其他两次合并，然后保存退出
+
 ```
 pick 16a9a47 update3 
 s a7186d8 update2
 s 7b16b28 update1
 ```
+
 执行完后会提示合并后的提交信息，不修改则直接保存退出
+
