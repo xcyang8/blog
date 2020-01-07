@@ -4,7 +4,7 @@
 
 - [Blog](#blog)
   - [服务启动](#%E6%9C%8D%E5%8A%A1%E5%90%AF%E5%8A%A8)
-  - [更新目录](#%E6%9B%B4%E6%96%B0%E7%9B%AE%E5%BD%95)
+  - [自动更新目录](#%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0%E7%9B%AE%E5%BD%95)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 

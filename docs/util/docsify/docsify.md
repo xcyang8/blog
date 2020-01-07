@@ -5,6 +5,7 @@
 - [快速开始](#%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B)
 - [部署](#%E9%83%A8%E7%BD%B2)
 - [插件](#%E6%8F%92%E4%BB%B6)
+- [官网](#%E5%AE%98%E7%BD%91)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 

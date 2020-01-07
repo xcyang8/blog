@@ -4,6 +4,7 @@
 
 - [RocketMQ](#rocketmq)
   - [介绍](#%E4%BB%8B%E7%BB%8D)
+  - [特点](#%E7%89%B9%E7%82%B9)
   - [安装](#%E5%AE%89%E8%A3%85)
     - [docker环境下安装](#docker%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85)
 

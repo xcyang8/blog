@@ -11,12 +11,11 @@
     - [有趣的东西](#%E6%9C%89%E8%B6%A3%E7%9A%84%E4%B8%9C%E8%A5%BF)
 - [存储](#%E5%AD%98%E5%82%A8)
   - [MySQL](#mysql)
-  - [Oracle](#oracle)
-  - [PostgreSQL](#postgresql)
   - [Redis](#redis)
 - [消息队列](#%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97)
   - [RocketMQ](#rocketmq)
 - [系统设计](#%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1)
+- [操作系统](#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F)
 - [工具](#%E5%B7%A5%E5%85%B7)
 - [技术文档](#%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3)
 

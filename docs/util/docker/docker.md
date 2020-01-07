@@ -6,6 +6,15 @@
   - [搭建](#%E6%90%AD%E5%BB%BA)
   - [常用命令](#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4)
   - [maven插件构建镜像](#maven%E6%8F%92%E4%BB%B6%E6%9E%84%E5%BB%BA%E9%95%9C%E5%83%8F)
+  - [拉取 推送镜像](#%E6%8B%89%E5%8F%96-%E6%8E%A8%E9%80%81%E9%95%9C%E5%83%8F)
+    - [拉镜像](#%E6%8B%89%E9%95%9C%E5%83%8F)
+    - [推送镜像](#%E6%8E%A8%E9%80%81%E9%95%9C%E5%83%8F)
+      - [推送给官方](#%E6%8E%A8%E9%80%81%E7%BB%99%E5%AE%98%E6%96%B9)
+      - [推给私库](#%E6%8E%A8%E7%BB%99%E7%A7%81%E5%BA%93)
+  - [docker-compose](#docker-compose)
+    - [compose 安装](#compose-%E5%AE%89%E8%A3%85)
+    - [compose 环境](#compose-%E7%8E%AF%E5%A2%83)
+    - [compose 常用命令](#compose-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
