@@ -100,3 +100,21 @@ org.apache.rocketmq.remoting.exception.RemotingConnectException: connect to <172
 加载外部配置，增加配置项brokerIP1 = xxx.xxx.xxx.xxx指你的外网地址或者本机ip地址（127.0.0.1不行）
 
 
+#### 使用
+生产者，消费者都在线
+
+```
+MQClientException: Send [3] times, still failed
+```
+
+rocket端口:9876  
+非vip通道端口:10911  
+vip通道端口:10909  
+
+rocketMQ暴露的端口 要和使用的一致
+```
+org.apache.rocketmq：rocketmq-spring-boot-starter
+包中默认走非vip通道端口 
+```  
+
+

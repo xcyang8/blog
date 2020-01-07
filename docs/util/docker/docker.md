@@ -50,22 +50,99 @@ curl https://registry.hub.docker.com/v1/repositories/foxiswho/rocketmq/tags\
 
 ### maven插件构建镜像
 
+// TODO
 
+### 拉取 推送镜像
+
+#### 拉镜像
+
+```
+搜索MySQL镜像
+docker search mysql
+
+拉取MySQL最新的版本
+docker pull mysql:latest
+
+查看镜像
+docker images
+```
+
+#### 推送镜像
+
+##### 推送给官方
+* 登陆
+
+```
+docker login
+
+mac-MacBook-Pro-yang:docker-deploy mac$ docker login
+Login with your Docker ID to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com to create one.  
+Username: chenaji123  
+Password:   
+Login Succeeded  
+```
+
+* 推送镜像的规范
+
+```
+docker push 注册用户名/镜像名:tag
+```
+
+* tag命令修改为规范的镜像
+
+```
+docker tag web chenaji123/web
+```
+
+* 推送修改的镜像
+
+```
+docker push chenaji123/web:latest
+```
+
+>web 是自己创建的库名  
+
+##### 推给私库
+1.构建私库
+```docker-compose
+registry:
+ container_name: registry
+ image: registry:2.6.2
+ ports:
+ - 5000:5000
+ restart: always
+ volumes:
+ - ${URL}/registry/lib:/var/lib/registry
+```
+2.验证私库搭建成
+```
+http://localhost:5000/v2/
+返回：{} 安装成功
+```
+3.修改镜像名
+```
+docker tag web localhost:5000/web
+```
+4.推送镜像
+```
+docker push localhost:5000/web:latest
+```
 ### docker-compose
 
-#### 安装
+#### compose 安装
 下载包
-sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /mydata/docker-compose
+`sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /mydata/docker-compose`
 
 将可执行权限应用于二进制文件：
-sudo chmod +x /mydata/docker-compose
+`sudo chmod +x /mydata/docker-compose`
 
 软连接（等于加入环境变量）
-ln -s /mydata/docker-compose /usr/local/bin/docker-compose
+`ln -s /mydata/docker-compose /usr/local/bin/docker-compose`
 
 检查安装成功
-docker-compose --version
-#### 环境
+`docker-compose --version`
+
+#### compose 环境
 在docker-compose.yml同级目录创建.dev文件
 ```
 URL=/Users/mac/docker-deploy
@@ -73,7 +150,7 @@ URL=/Users/mac/docker-deploy
 
 然后 docker-compose.yml 中配置${URL}
 
-#### 常用命令
+#### compose 常用命令
 ```
 docker-compose up -d nginx                          构建建启动nignx容器
 
